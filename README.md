@@ -1,6 +1,5 @@
 # Malá násobilka (PHP)
 
-Dopište PHP skript, který bude generovat tabulku malé násobilky podle zadaných hodnot formulářem..
 
 Živá ukázka: [https://php.edumach.cz/mala-nasobilka.php](https://php.edumach.cz/mala-nasobilka.php) 
 
@@ -12,19 +11,24 @@ Dopište PHP skript, který bude generovat tabulku malé násobilky podle zadan�
   * do buběk vypočítá a zobrazí výsledek např. `7 × 4 = 28` 
   * PHP kód se opět vykonává **na serveru** a generuje HTML.
 
-# Příprava
+## Příprava
 
 Obsahem cvičení je pomocí klonování repozitáře z GitHubu zprovoznit jednoduchý web na serveru TuX a **dokončit jej podle zadání**.
 
-1. Přihlas se na server TuX a přesuň se do adresáře `~/www`
+1. Přihlas se **v terminálu** na server TuX a přesuň se do adresáře `~/www`
 2. Gitem naklonuj repozitář `https://github.com/edumach/nasobilka`
 3. Tím vznikne adresář `~/www/nasobilka/`
-4. Zkontroluj git log projektu.
-5. Zkontroluj funkčnost webu na URL `https://tux.panska.cz/~10XPrijmeniJ/nasobilka`
+
+    ```
+    $ cd www
+    $ git clone https://github.com/edumach/nasobilka
+    $ cd nasobilka
+    ```
+4. Zkontroluj funkčnost webu na URL `https://tux.panska.cz/~10XPrijmeniJ/nasobilka`
 
 
 
-# Obsah souboru `index.php`
+## Obsah souboru `index.php`
 
 ### Vlastní funkce pro generování [rozbalovací nabídky](https://www.w3schools.com/html/tryit.asp?filename=tryhtml_elem_select) 
 
@@ -53,12 +57,12 @@ Funkce zatím **nic nepočítá**, jen generuje `<select>`.
 
 ```php
 <form method="get">
-    <p>
-        Počet řádků: <?php selectCisla("a"); ?> 
-        &times;
-        Počet sloupců: <?php selectCisla("b"); ?>
-        <button type="submit">Vypočítat</button>
-    </p>
+  <p>
+    Počet řádků: <?php selectCisla("a"); ?> 
+    &times;
+    Počet sloupců: <?php selectCisla("b"); ?>
+    <button type="submit">Vypočítat</button>
+  </p>
 </form>
 ```
 
@@ -134,3 +138,7 @@ Např. ve tvaru:
 * HTML můžeš psát přímo do `echo`
 
 
+## Odevzdání
+
+Aplikace bude fungovat podle zadání a bude dostupná na zadané URL adrese.
+ 
